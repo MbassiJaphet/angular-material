@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material.module';
 
 import 'hammerjs';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import 'hammerjs';
   ],
   imports: [
     FormsModule,
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
