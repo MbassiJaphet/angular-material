@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  isChecked = true;
+
+  clicked(desc: string) {
+    console.log(desc)
+    console.log('Checked : ', this.isChecked)
+  }
+
   title = 'angular-material';
 }

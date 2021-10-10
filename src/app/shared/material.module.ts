@@ -6,8 +6,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
-  declarations: [],
   imports: [
+    CommonModule,
+    MatButtonModule,
+    MatCheckboxModule
+  ],
+  exports: [
     CommonModule,
     MatButtonModule,
     MatCheckboxModule
