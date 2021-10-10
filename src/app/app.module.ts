@@ -9,6 +9,7 @@ import { MaterialModule } from './shared/material.module';
 
 import 'hammerjs';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    FlexLayoutModule,
     BrowserAnimationsModule,
   ],
   providers: [],
