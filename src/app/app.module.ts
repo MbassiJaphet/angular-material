@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaterialModule } from './shared/material.module';
 
 import 'hammerjs';
 import { CommonModule } from '@angular/common';
@@ -20,7 +19,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    MaterialModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
   ],
