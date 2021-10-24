@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
@@ -16,11 +17,20 @@ export class MainContentComponent implements OnInit {
     private userService: UserService,
   ) { }
 
+
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const id = +params.id;
-      this.user = this.userService.getById(id);
+      this.user = undefined;
+
+      this.userService.users.subscribe(users => {
+        if (users.length == 0) return;
+
+        setTimeout(() => {
+          this.user = users.find(user => user.id == id)
+        }, 500)
+      });
     })
   }
-
+  
 }
