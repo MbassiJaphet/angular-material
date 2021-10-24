@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
 
 import { CdkTableModule } from '@angular/cdk/table';
 
@@ -23,6 +24,7 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatCardModule,
     MatProgressSpinnerModule,
     MatTabsModule,
+    MatTableModule,
   ]
 })
 export class MaterialModule { }

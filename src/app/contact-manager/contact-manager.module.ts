@@ -8,6 +8,7 @@ import { ContactManagerRoutingModule } from './contact-manager-routing.module';
 import { MaterialModule } from '../shared/material.module';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NotesComponent } from './components/notes/notes.component';
 
 
 
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactManagerAppComponent,
     ToolbarComponent,
     MainContentComponent,
-    SideNavComponent
+    SideNavComponent,
+    NotesComponent
   ],
   imports: [
     CommonModule,
