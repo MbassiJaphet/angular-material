@@ -11,19 +11,22 @@ import { Note } from '../../models/note';
 export class NotesComponent implements OnInit, AfterViewInit {
 
   @Input() notes!: Note[];
-
+  columns = ['position', 'title', 'date'];
+  dataSource!: MatTableDataSource<Note>;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor() { }
 
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource<Note>(this.notes)
   }
+
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
   }
 
-  columns = ['position', 'title', 'date'];
-  dataSource!: MatTableDataSource<Note>;
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 
 }
