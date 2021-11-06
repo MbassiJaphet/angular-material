@@ -13,6 +13,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 import { CdkTableModule } from '@angular/cdk/table';
@@ -34,6 +35,7 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatInputModule,
     MatFormFieldModule,
     MatSortModule,
+    MatMenuModule,
   ]
 })
 export class MaterialModule { }
