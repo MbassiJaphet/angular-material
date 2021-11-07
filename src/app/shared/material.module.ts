@@ -14,6 +14,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 import { CdkTableModule } from '@angular/cdk/table';
@@ -36,6 +39,8 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatFormFieldModule,
     MatSortModule,
     MatMenuModule,
+    MatDialogModule,
+    MatSelectModule,
   ]
 })
 export class MaterialModule { }
