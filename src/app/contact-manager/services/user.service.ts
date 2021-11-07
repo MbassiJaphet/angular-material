@@ -22,6 +22,12 @@ export class UserService {
     return this._users.asObservable();
   }
 
+  addUser(user: User): Observable<User> {
+    user.id = this.dataStore.users.length + 1;
+    this.dataStore.users.push(user);
+    return new BehaviorSubject<User>(user).asObservable();
+  }  
+
   getById(id: number) {
     return this.dataStore.users.find(user => user.id == id);
   }
