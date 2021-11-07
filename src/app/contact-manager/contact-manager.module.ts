@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactManagerAppComponent } from './contact-manager-app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
@@ -28,6 +28,7 @@ import { NewContactDialogComponent } from './components/new-contact-dialog/new-c
     CommonModule,
     MaterialModule,
     HttpClientModule,
+    ReactiveFormsModule,
     ContactManagerRoutingModule,
   ],
   entryComponents: [

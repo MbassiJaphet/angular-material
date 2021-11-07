@@ -1,13 +1,13 @@
 <h2>Add new Contact</h2>
 <mat-dialog-content>
-    <div class="new-contact-container">
+    <div [formGroup]="newContactForm" class="new-contact-container">
         <mat-form-field appearance="fill">
             <mat-label>Avatar</mat-label>
-            <mat-select placeholder="Avatar" [(ngModel)]="user.avatar">
+            <mat-select placeholder="Avatar" [formControl]="avatar">
                 <mat-select-trigger>
-                    <mat-icon svgIcon={{user.avatar}}>
-                        {{ user.avatar }}
-                    </mat-icon> &nbsp; {{ user.avatar }}
+                    <mat-icon svgIcon={{avatar.value}}>
+                        {{ avatar.value }}
+                    </mat-icon> &nbsp; {{ avatar.value }}
                 </mat-select-trigger>
                 <mat-option *ngFor="let avatar of avatars" value="{{ avatar }}">
                     <mat-icon svgIcon={{avatar}}>
@@ -18,10 +18,11 @@
             </mat-select>
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="text" placeholder="Name" [(ngModel)]="user.name" required>
+            <input matInput type="text" placeholder="Name" [formControl]="name" required>
+            <mat-error>{{ getErrorMessage() }}</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="TextArea" placeholder="Bio" [(ngModel)]="user.bio">
+            <input matInput type="TextArea" placeholder="Bio" [formControl]="bio">
         </mat-form-field>
     </div>
 </mat-dialog-content>
@@ -29,7 +30,7 @@
     <button mat-button mat-dialog-close>
         <mat-icon>close</mat-icon>Cancel
     </button>
-    <button mat-button color='primary' (click)="save()">
+    <button type="submit" [disabled]="newContactForm.invalid" mat-button color='primary' (click)="save()">
         <mat-icon>save</mat-icon>Save
     </button>
 </mat-dialog-actions>
